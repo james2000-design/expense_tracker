@@ -8,36 +8,38 @@ class ExpenseItem extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            expense.title,
-            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 4),
-          Row(
-            children: [
-              Text(
-                '\$${expense.amount.toStringAsFixed(2)}',
-                style: const TextStyle(fontSize: 16, color: Colors.grey),
-              ),
-              const Spacer(),
-              Row(
-                children: [
-                  Icon(categoryIcons[expense.category], color: Colors.grey),
-                  const SizedBox(width: 4),
-                  Text(
-                    expense.formattedDate,
-                    style: const TextStyle(color: Colors.grey),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ],
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              expense.title,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 4),
+            Row(
+              children: [
+                Text(
+                  '\$${expense.amount.toStringAsFixed(2)}',
+                  style: const TextStyle(fontSize: 16, color: Colors.grey),
+                ),
+                const Spacer(),
+                Row(
+                  children: [
+                    Icon(categoryIcons[expense.category], color: Colors.grey),
+                    const SizedBox(width: 4),
+                    Text(
+                      expense.formattedDate,
+                      style: const TextStyle(color: Colors.grey),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
