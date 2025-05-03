@@ -9,10 +9,13 @@ var kDarkColorScheme = ColorScheme.fromSeed(
   brightness: Brightness.dark,
 );
 void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((
+  //   onValue,
+  // ) {
   runApp(
     MaterialApp(
       darkTheme: ThemeData.dark().copyWith(
-        useMaterial3: true,
         colorScheme: kDarkColorScheme,
         appBarTheme: AppBarTheme(
           backgroundColor: kDarkColorScheme.onPrimaryContainer,
@@ -57,4 +60,5 @@ void main() {
       home: const Expenses(),
     ),
   );
+  // });
 }
