@@ -81,9 +81,7 @@ class Chart extends StatelessWidget {
                             color:
                                 isDarkMode
                                     ? Theme.of(context).colorScheme.secondary
-                                    : Theme.of(
-                                      context,
-                                    ).colorScheme.primary.withOpacity(0.7),
+                                    : Theme.of(context).colorScheme.primary,
                           ),
                         ),
                       ),
